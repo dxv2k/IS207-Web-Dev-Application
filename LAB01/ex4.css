@@ -1,0 +1,19 @@
+/* table, th, td {
+  border: 1px solid green;
+} */
+
+#tb {
+    width: 32%;
+    background-color: #FFCCFF;
+}
+
+#line1{ 
+    font-size: 6 pt; 
+    color: #3300FF; 
+}
+
+
+#line468{ 
+    /* font-size: 6 pt;  */
+    color: #CCFFFF; 
+}

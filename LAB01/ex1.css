@@ -1,0 +1,29 @@
+/* *center{ 
+    text-align: center; 
+} */
+
+#title{ 
+    background-color: #CCFF99;
+    display: inline-block; 
+    color: #000066;
+    font-size: 5 pt; 
+}
+
+#p1 { 
+    font-size: 4 pt;
+    color: #990000; 
+}
+
+#p2 { 
+    font-size: 4 pt;
+    color: #990099; 
+}
+
+h3 { 
+    color: #0000FF; 
+}
+
+body {
+    /* background-image: url('img.jpg'); */
+    text-align: center; 
+}
