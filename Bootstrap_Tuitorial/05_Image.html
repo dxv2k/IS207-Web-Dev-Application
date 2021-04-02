@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Bootstrap Image</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Rounded Corners</h2>
+            <p>The <code>.img-rounded</code> class adds rounded corners to an image</p>
+            <img src="./Img/BG_01.jpg" alt="BG_01_Rounded" class="img-rounded", width="600", height="300">
+
+            <h2>Circle</h2>
+            <p>The <code>.img-circle</code> class shapes the image to a circle</p>
+            <img src="./Img/BG_02.png" alt="BG_02_Circle" class="img-circle", width="600", height="300">
+
+            <h2>Thumbnail</h2>
+            <p>The <code>.img-thumbnail</code> class creates a thumbnail of the image</p>
+            <img src="./Img/BG_01.jpg" alt="BG_01_Thumbnail" class="img-thumbnail" width="600" height="300">
+
+            <h2>Responsive Image</h2>
+            <p>The <code>.img-responsive</code> class makes the image sacle nicely to the parent element</p>
+            <img src="./Img/BG_02.png" alt="BG_02_Responsive" class="img-responsive">
+
+            <h2>Image Gallery <small>Using grid system and thumbnail</small></h2>
+            <div class="row">
+                <a href="./Img/BG_02.png">
+                    <div class="col-sm-6">
+                        <img src="./Img/BG_02.png" alt="BG_02" class="img-thumbnail" style="width: 100%;">
+                        <div class="caption">
+                            Lorem ipsum donec id elit non mi porta gravida at eget metus.
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./Img/BG_01.jpg">
+                    <div class="col-sm-6">
+                        <img src="./Img/BG_01.jpg" alt="BG_02" class="img-thumbnail" style="width: 100%;">
+                        <div class="caption">
+                            Lorem ipsum donec id elit non mi porta gravida at eget metus.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- 16:9 aspect ratio -->
+            <h2>Responsive Embeds</h2>
+            <p>Create a responsive video and scale it nicely to the parent element with an 16:9 aspect ratio</p>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="./Videos/VID_01.mp4" ></iframe>
+            </div>
+        </div>
+    </body>
+</html>
