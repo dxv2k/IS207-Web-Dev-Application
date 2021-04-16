@@ -7,8 +7,8 @@ var db = mongoose.connect('mongodb://localhost/swag-shop');
 var Product = require('./model/product'); 
 var WishList = require('./model/wishlist'); 
 
-app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({extended:false})); 
+app.use(express.json()); 
+app.use(express.urlencoded({extended:false})); 
 // app.use(express.json()); 
 // app.use(express.urlencoded({extended:false})); 
 
@@ -19,7 +19,7 @@ app.listen(3000,function(){
 
 
 
-app.post('/proudct',function(request,response){ 
+app.post('/product',function(request,response){ 
     // var product = new Proudct({
     //     title: requbodyParserest.body.titleprice
     // }); 
