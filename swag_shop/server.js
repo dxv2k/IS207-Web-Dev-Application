@@ -18,14 +18,24 @@ app.get('/', function(req, res){
 }); 
 
 app.get('/wishlist',function(request,response){ 
-    WishList.find({}, function(err, wishLists) { 
-        if (err){ 
-            response.status(500).send({error:"Could not fetch wish list!"}); 
-        } 
-        else { 
-            response.send(wishLists); 
-        }
-    }); 
+    WishList.find({}).populate({path:'products', model: 'Product'}).exec(
+        function(err, wishLists){ 
+            if (err){ 
+                response.status(500).send({error:"Could not fetch wish list!"}); 
+            } 
+            else { 
+                response.send(wishLists); 
+            }
+        });   
+
+    // WishList.find({}, function(err, wishLists) { 
+        // if (err){ 
+        //     response.status(500).send({error:"Could not fetch wish list!"}); 
+        // } 
+        // else { 
+        //     response.send(wishLists); 
+        // }
+    // }); 
 
 }); 
 
@@ -59,10 +69,11 @@ app.put('/wishlist/product/add',function(request,response){
                     }
                     else{ 
                         response.send(wishList); 
+                        // response.send("Successfully added to wish list"); 
                     }
                 });
         }
-    }) 
+    }); 
 }); 
 
 app.post('/product',function(request,response){ 
