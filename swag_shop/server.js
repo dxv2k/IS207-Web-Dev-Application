@@ -1,3 +1,4 @@
+const { response } = require('express');
 var express = require('express'); 
 var app = express(); 
 // var bodyParser = require('body-parser'); 
@@ -17,10 +18,21 @@ app.get('/', function(req, res){
 }); 
 
 
+app.post('/wishlist',function(request,response){ 
+    var wishList = new WishList(); 
+    wishList.title = request.body.title; 
+
+    wishList.save(function(err, newWishList){ 
+        if (err){ 
+            response.status(500).send({error:"Could not create a new wish list!"}); 
+        }
+        else{ 
+            response.send(newWishList); 
+        }
+    }); 
+}); 
+
 app.post('/product',function(request,response){ 
-    // var product = new Proudct({
-    //     title: requbodyParserest.body.titleprice
-    // }); 
     var product = new Product(); 
     // Below this in
     product.title = request.body.title; 
@@ -33,6 +45,18 @@ app.post('/product',function(request,response){
             response.status(200).send(savedProduct); 
             // or use this: response.send(savedProduct); 
         }
+    }); 
+}); 
+
+
+app.get('/product',function(request,response){ 
+    Product.find({}, function(err, products){ 
+        if (err){ 
+            response.status(500).send({error: "Could not fetch products"});
+        }
+        else { 
+            response.send(products);
+        } 
     }); 
 }); 
 

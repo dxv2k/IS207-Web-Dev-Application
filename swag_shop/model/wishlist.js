@@ -5,10 +5,10 @@ var Schema = mongoose.Schema;
 var ObjectId = mongoose.Schema.Types.ObjectId; 
 
 // Relationship database
-var wishList = new Schema({ 
+var WishList = new Schema({ 
     title: {type: String, default: "Cool Wish List"}, 
-    products:[{type: ObjectId, ref: 'Proudct'}]  
+    products:[{type: ObjectId, ref: 'Product'}]  
 }); 
 
 
-module.exports = mongoose.model('WishList', wishList); 
+module.exports = mongoose.model('WishList', WishList); 
