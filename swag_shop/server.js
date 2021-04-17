@@ -17,6 +17,17 @@ app.get('/', function(req, res){
     res.send('Hello World!'); 
 }); 
 
+app.get('/wishlist',function(request,response){ 
+    WishList.find({}, function(err, wishLists) { 
+        if (err){ 
+            response.status(500).send({error:"Could not fetch wish list!"}); 
+        } 
+        else { 
+            response.send(wishLists); 
+        }
+    }); 
+
+}); 
 
 app.post('/wishlist',function(request,response){ 
     var wishList = new WishList(); 
@@ -30,6 +41,28 @@ app.post('/wishlist',function(request,response){
             response.send(newWishList); 
         }
     }); 
+}); 
+
+
+app.put('/wishlist/product/add',function(request,response){ 
+    Product.findOne({_id: request.body.productId}, function(err, product) { 
+        if (err){
+            response.status(500).send({error:"Could not add item to wish list!"}); 
+        }
+        else { 
+            WishList.updateOne(
+            // WishList.update(
+                {_id: request.body.wishListId}, 
+                {$addToSet: {products: product._id}}, function(err, wishList){ 
+                    if (err){ 
+                        response.status(500).send({error:"Could not create a new wish list!"}); 
+                    }
+                    else{ 
+                        response.send(wishList); 
+                    }
+                });
+        }
+    }) 
 }); 
 
 app.post('/product',function(request,response){ 
