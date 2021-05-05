@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Bootstrap Progress Bar</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Bootstrap Progress Bar</h1>
+            </div>
+
+            <h2>Basic Progress Bar</h2>
+            <p>A progress bar can be used to show user how far along he is in a process</p><br>
+            <p>Bootstrap provides several types of progress bars.</p><br>
+            <p>A default progress bar in Bootstrap look like this:</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemax="100" aria-valuemin="0" style="width: 70%;">
+                    <span class="sr-only">70% Complete</span>
+                </div>
+            </div>
+
+            <h2>Progress Bar with Label</h2>
+            <p>Remove the <code>.sr-only</code> class from the progress bar to show a visible percentage:</p>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" style="width: 70%;">70%</div>
+            </div>
+
+            <h2>Colored Progress Bars</h2>
+            <p>Contextual classes are used to provide "meaning through colors"</p><br>
+            <p>The contextual class that con be used with progress bar are:</p>
+            <ul>
+                <li><code>.progress-bar-success</code></li>
+                <li><code>.progress-bar-info</code></li>
+                <li><code>.progress-bar-warning</code></li>
+                <li><code>.progress-bar-danger</code></li>
+            </ul>
+            <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" style="width: 20%;">
+                    20% (Success)
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                    40% (Info)
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60" style="width: 60%;">
+                    60% (Warning)
+                </div>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemax="100" aria-valuemin="0" style="width: 80%;">
+                    80% (Danger)
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
