@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>JavaScirpt Getting Started</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <!-- Create a funtion in head section -->
+        <script>
+            function ChangeParagraphInHead(){
+                document.getElementById("ChangeInHead").innerHTML = "Paragraph Changed"
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>JavaScript Where To?</h1>
+            </div>
+            <h2>The &lt;script&gt; tag</h2>
+            <p>In HTML, JavaScript code in inserted between <code>&lt;script&gt;</code> and &lt;/script&gt;</p>
+            <p id="demo"></p>
+            <!-- Example of JavaScript code -->
+            <script>
+                document.getElementById("demo").innerHTML = "My First JavaScript";
+            </script>
+            
+            <h2>JavaScript in &lt;head&gt; or &lt;body&gt;</h2>
+            <p>You can place any number of scripts in HTML document. Scripts can be placed in <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code>  or in both</p>
+            <p>The example below show the function is invoked when a button is clicked:</p>
+            <p id="ChangeInHead">This is the first paragraph, click the button bellow to change it.</p>
+            <p id="ChangeInBody">This is the second paragraph, click the button below to change it.</p>
+            <button type="button" class="btn btn-primary" onclick="ChangeParagraphInHead()">Click to change the first paragraph</button>
+            <button type="button" class="btn btn-primary" onclick="ChangeParagraphInBody()">Click to change the second paragraph</button>
+            <!-- Create a function in body section -->
+            <script>
+                function ChangeParagraphInBody(){
+                    document.getElementById("ChangeInBody").innerHTML = "Paragraph Changed"
+                }
+            </script>
+
+            <h2>External JavaScript</h2>
+            <p>Scirpts can also be placed in external files <br></p>
+            <p>JavaScript files have the file extension <code>.js</code><br></p>
+            <p>To use an external script, put the name of the script file in the <code>src</code> attribute of a <code>&lt;script&gt;</code> tag</p>
+            <!-- Example of using external JavaScript -->
+            <p id="ChangeOutside">This is the third paragraph, click the button below to change it.</p>
+            <script src="src/01.Getting_Started.js"></script>
+            <button type="button" class="btn btn-primary" onclick="ChangePara()">Click to change the third paragraph</button>
+            
+        </div>
+    </body>
+</html>
