@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>JavaScirpt Getting Started</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <!-- Create a funtion in head section -->
+        <script>
+            function ChangeParagraphInHead(){
+                document.getElementById("ChangeInHead").innerHTML = "Paragraph Changed"
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>JavaScript Where To?</h1>
+            </div>
+            <h2>JavaScript Display Possibilities</h2>
+            <p>JavaScript can "display" data in different ways:</p>
+            <ul>
+                <li>Writing into an HTML element, using <code>innerHTML</code></li>
+                <li>Writing into the HTML ouput using <code>document.write()</code></li>
+                <li>Writing into an alert box, using <code>window.alert()</code></li>
+                <li>Writing into the browser console, using <code>console.log()</code></li>
+            </ul>
+
+            <h2>Using <code>innerHTML</code></h2>
+            <p>To access an HTML element, JS can use the <code>document.getElementById(id)</code><br></p>
+            <!-- Example below -->
+            <p id="sum">Click the button to calculate 5 + 6: </p>
+            <button type="button" class="btn btn-primary" onclick="Sum()">Sum</button>
+            <script>
+                function Sum(){
+                    document.getElementById("sum").innerHTML = 5 + 6;
+                }
+            </script>
+
+            <h2>Using <code>document.write()</code></h2>
+            <p>For testing purposes, it is convenient to use <code>document.write()</code></p>
+        </div>
+    </body>
+</html>
