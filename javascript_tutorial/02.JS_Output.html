@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>JavaScirpt Getting Started</title>
+        <title>JavaScirpt Output</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -18,7 +18,7 @@
     <body>
         <div class="container">
             <div class="jumbotron">
-                <h1>JavaScript Where To?</h1>
+                <h1>JavaScript Output</h1>
             </div>
             <h2>JavaScript Display Possibilities</h2>
             <p>JavaScript can "display" data in different ways:</p>
@@ -40,8 +40,49 @@
                 }
             </script>
 
-            <h2>Using <code>document.write()</code></h2>
+            <h2>Using <code>document.write()</code></h2> 
             <p>For testing purposes, it is convenient to use <code>document.write()</code></p>
+            <p><b>Warning:</b> Usingdocument.write() after an HTML document is loaded, will <b>delete all existing HTML:</b></p>
+            <!-- Example below -->
+            <button type="button" class="btn btn-primary" onclick="SumWrite()">Click to generate new paragraph</button>
+            <script>
+                function SumWrite(){
+                    document.write("This is paragraph using document.write()");
+                }
+            </script>
+
+            <h2>Using <code>window.alert()</code></h2>
+            <p>You can use alert box to display data:</p>
+            <button type="button" class="btn btn-primary" onclick="RaiseAlertWindow()">Click to raise alert</button>
+            <!-- Example below -->
+            <script>
+                function RaiseAlertWindow(){
+                    window.alert("Hey, this is an alert!")
+                }
+            </script>
+            <p><b>Notice:</b> You can skip the <code>window</code> keyword</p>
+
+            <h2>Using <code>JavaScript Print</code></h2>
+            <p>JavaScript does not have any print object or print methods.<br></p>
+            <p>You cannot access output devices from JavaScript <br></p>
+            <button type="button" class="btn btn-primary" onclick="PrintFunc()">Click the button to print!</button>
+            <!-- Example below -->
+            <script>
+                function PrintFunc(){
+                    // window.print()
+                    print()
+                }
+            </script>
+
+            <h2>Using <code>console.log()</code></h2>
+            <p>For debugging purposes, you can call the <code>console.log()</code> method in the browser to display data.</p>
+            <button type="button" class="btn btn-primary" onclick="ConsoleLogFunc()">Click the button to display data in console</button>
+            <!-- Example below -->
+            <script>
+                function ConsoleLogFunc(){
+                    console.log("This is the message in console!")
+                }
+            </script>
         </div>
     </body>
 </html>
