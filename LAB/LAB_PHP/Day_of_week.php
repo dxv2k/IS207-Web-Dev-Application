@@ -13,7 +13,10 @@
         <div class="jumbotron">
             <h1>In ra thứ của một ngày</h1>
         </div>
-        <h2>Form</h2>
+        <h2><b>Đề bài</b></h2>
+        <p>Thiết kế 3 texfield để nhập</p><br>
+        <p>Tạo một nút submit, sau khi nhấn nút submit thì trang web in ra thứ của ngày người dùng nhập</p><br>
+        <h2><b>Tạo form</b></h2>
         <p>Điền thứ ngày tháng vào form bên dưới</p>
         <form action="#" method="get" class="form-group">
             <div class="form-group">
