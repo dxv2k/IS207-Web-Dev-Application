@@ -65,7 +65,7 @@
                 $s=$s-1;
                 $du = $s%7;
                 $thu = array("Thứ 5","Thứ 6","Thứ 7", "chủ nhật","Thứ 2","Thứ 3","Thứ 4");
-                echo "<p> Ngày ".$ngay." tháng ".$thang." năm ".$nam." là ngày ".$thu[$du];    
+                echo "<p> Ngày ".$ngay." tháng ".$thang." năm ".$nam." là ngày ".$thu[$du]. "</p>";    
             }
         ?>
     </div>
