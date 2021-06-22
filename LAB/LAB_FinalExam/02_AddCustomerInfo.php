@@ -45,6 +45,7 @@
         </form>
             <?php
             if (isset($_POST['ketqua'])&&$_POST['ketqua'] === 'in'){
+                include "get_connection.php";
                 $sql = "SELECT MAKH, HOTENKH FROM khachhang WHERE HOTENKH='" . $_POST["name"] . "'";
                 $result = $conn->query($sql);
                 $row = $result->fetch_assoc();
