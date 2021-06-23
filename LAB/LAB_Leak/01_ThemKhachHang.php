@@ -29,7 +29,7 @@
             <?php
             if (isset($_POST['ketqua'])&&$_POST['ketqua'] === 'in'){
                 // include "get_connection.php";
-                // $sql = "insert into khachhang (MAKH,HOTENKH, DIENTHOAI) values ('".$_POST['id']."','".$_POST['name']."','".$_POST['phone']."')";
+                // $sql = "insert into khachhang (MAKH,HOTENKH, SDT) values ('".$_POST['id']."','".$_POST['name']."','".$_POST['phone']."')";
                 // if ($conn->query($sql) == true)
                 //     echo "Inserted successfully";
                 // else echo "Failed";
